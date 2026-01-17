@@ -1,43 +1,15 @@
 ### 🚨 Exception Entry — #2025-04
 
 - **Date:** 12 Oct 2025  
-- **Affected Release:** Hotfix v2.4.1 — *Login Service*  
-- **Quality Gate Bypassed:** Gate 3 — Full Automation Regression Suite  
+- **Release:** Hotfix v2.4.1 — Login Service  
+- **Gate Bypassed:** Gate 3 (Full Automation Regression)  
 
----
+- **Justification:** P0 incident—login failure affecting 100% of Android users (~£12k revenue loss per hour).  
+- **Risk:** High—possible regression in shared Sign-up auth flow.  
 
-#### 📌 Business Justification
-A **P0 production incident** resulted in login failure for **100% of Android users**.  
-Estimated revenue impact was **~£12k per hour**, making immediate release critical to limit business loss.
+- **Mitigation:**  
+  1. Manual Sign-up smoke test on two physical devices  
+  2. Full regression scheduled for 02:00 AM post-deploy  
+  3. Manual verification at 09:00 AM next day  
 
----
-
-#### ⚠️ Risk Assessment
-- **Overall Risk:** High  
-- **Known Exposure:** Potential regression in the *Sign-up* flow due to shared authentication modules.
-
----
-
-#### 🛡️ Mitigation Plan
-To offset the bypassed gate, the following controls were enacted:
-
-1. **Pre-Deploy Validation**
-   - Manual smoke testing of the *Sign-up* flow completed on **two physical Android devices**.
-
-2. **Post-Deploy Automation**
-   - Full automation regression suite scheduled to run at **02:00 AM** post-deployment.
-
-3. **Day-After Assurance**
-   - Dedicated manual QA verification scheduled for **09:00 AM** the following day.
-
-> Risk was consciously accepted with layered safeguards in place to detect and correct any regression rapidly.
-
----
-
-#### ✅ Approval
-- **Chad Shaw** — Test Manager  
-- **Peter Jones** — Product Owner  
-
----
-
-> *Exception approved under emergency release protocol. This entry is logged for audit and retrospective review.*
+- **Approved By:** Chad Shaw (QA Lead), Peter J. (Product Owner)
