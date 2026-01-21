@@ -15,7 +15,7 @@
 ## 🤖 Automation Standards (The "Golden Path")
 *Tool standardisation prevents silos and ensures any QA Engineer can effectively support any squad.*
 
-### Web & API Framework: Playwright (TypeScript)
+### Web & API Framework: Playwright (C#)
 * **Governance Choice:** Selected over Selenium and Cypress for native auto-waiting, superior parallel execution, and unified UI + API testing within a single framework.
 * **Capabilities:** High-speed parallel execution, network interception to support Gate 2 contract testing, and built-in tracing to accelerate root cause analysis.
 
